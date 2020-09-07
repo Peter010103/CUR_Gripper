@@ -11,8 +11,8 @@ The Fusion scripts from the above links are in the scripts folder for convenienc
 - 3D printed in PETG (STL files in assets)
 
 <p align="center">
-  <img src="assets/Gripperv4.png" width="300">
+  <img src="assets/Gripperv4.png" width="500">
 </p>
 
 # URDF Layout
-<img src="assets/Gripperv4.png" width="400">
+<img src="assets/graph3.png" width="400">
