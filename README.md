@@ -1,4 +1,7 @@
 # CUR_Gripper
 Cambridge University Robotics > Robocup Rescue > GripperV4
 
-Added URDF and ROS launch files using https://github.com/syuntoku14/fusion2urdf
+- URDF file produced using https://github.com/yanshil/Fusion2PyBullet
+- Visualisation graphs produced using https://github.com/yanshil/Joint2Graphviz
+
+The Fusion scripts from the above links are in the scripts folder for convenience.
