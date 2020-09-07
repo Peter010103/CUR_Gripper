@@ -1,0 +1,8 @@
+prefix=/home/peterwoo/catkin_ws/devel
+
+Name: GripperV4_URDF_description
+Description: Description of GripperV4_URDF_description
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

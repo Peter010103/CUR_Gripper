@@ -1,0 +1,3 @@
+<launch>
+  <param name="robot_description" textfile="$(find gripperv4)/urdf/gripperv4.urdf"/>
+</launch>
