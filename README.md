@@ -13,8 +13,8 @@ The Fusion scripts from the above links are in the scripts folder for convenienc
 Follows a common 4-bar linkage (parallelogram) mechanism for gripping action. The wrist axes are designed to be able to rotate a full 360 degrees (must ensure long enough wires are used !)
 
 <p align="center">
-  <img src="assets/Gripperv4.png" width="500">
+  <img src="assets/preview.png" width="500">
 </p>
 
 # URDF Layout
-<img src="assets/graph3.png" width="400">
+<img src="assets/urdf.png" width="400">
