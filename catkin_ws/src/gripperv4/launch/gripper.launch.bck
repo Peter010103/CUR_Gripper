@@ -3,12 +3,10 @@
         name="robot_description"
         textfile="$(find gripperv4)/urdf/gripperv4.urdf"
     />
-
     <rosparam
         file="$(find gripperv4)/config/dependent_joints.yaml"
         command="load"
     />
-    
     <param name="use_gui" value="true" />
 
     <node

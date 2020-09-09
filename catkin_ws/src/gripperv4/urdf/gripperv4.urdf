@@ -5,7 +5,28 @@
   <color rgba="0.700 0.700 0.700 1.000"/>
 </material>
 
+<material name="orange">
+  <color rgba="0.8 0.4 0.0 1.0"/>
+</material>
+
+<material name="coral">
+  <color rgba="0.8 0.3 0.3 1.0"/>
+</material>
+
+<material name="black">
+  <color rgba="0.1 0.1 0.1 1.0"/>
+</material>
+
 <link name="base_link">
+</link>
+
+<joint name="dummy_link" type="fixed">
+  <origin rpy="0 0 0" xyz="0 0 0"/>
+  <parent link="base_link"/>
+  <child link="base_link_actual"/>
+</joint>
+
+<link name="base_link_actual">
   <inertial>
     <origin rpy="0 0 0" xyz="0.015992436485837883 -0.0949999999742469 -0.040090057637020185"/>
     <mass value="0.009061016616131982"/>
@@ -14,15 +35,15 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="orange"/>
     <material/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -36,15 +57,15 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.016 0.095 0.0374"/>
     <geometry>
-      <mesh filename="meshes/roll_yaw_servo1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/roll_yaw_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
     <material/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.016 0.095 0.0374"/>
     <geometry>
-      <mesh filename="meshes/roll_yaw_servo1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/roll_yaw_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -58,15 +79,15 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.016 0.0466 0.021"/>
     <geometry>
-      <mesh filename="meshes/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="black"/>
     <material/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.016 0.0466 0.021"/>
     <geometry>
-      <mesh filename="meshes/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -80,15 +101,15 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="meshes/l_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/l_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="orange"/>
     <material/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="meshes/l_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/l_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -102,15 +123,15 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.032 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="meshes/r_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/r_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="orange"/>
     <material/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.032 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="meshes/r_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/r_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -124,15 +145,15 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.05 0.003"/>
     <geometry>
-      <mesh filename="meshes/l_link31.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/l_link31.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="coral"/>
     <material/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.05 0.003"/>
     <geometry>
-      <mesh filename="meshes/l_link31.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/l_link31.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -146,15 +167,15 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.032 -0.05 0.003"/>
     <geometry>
-      <mesh filename="meshes/r_link31.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/r_link31.stl" scale="0.001 0.001 0.001"/>
     </geometry>
-    <material name="silver"/>
+    <material name="coral"/>
     <material/>
   </visual>
   <collision>
     <origin rpy="0 0 0" xyz="-0.032 -0.05 0.003"/>
     <geometry>
-      <mesh filename="meshes/r_link31.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="package://gripperv4/assets/r_link31.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
