@@ -6,15 +6,6 @@
 </material>
 
 <link name="base_link">
-</link>
-
-<joint name="dummy_link" type="fixed">
-  <origin rpy="0 0 0" xyz="0 0 0"/>
-  <parent link="base_link"/>
-  <child link="base_link_actual"/>
-</joint>
-
-<link name="base_link_actual">
   <inertial>
     <origin rpy="0 0 0" xyz="0.015992436485837883 -0.0949999999742469 -0.040090057637020185"/>
     <mass value="0.009061016616131982"/>
@@ -23,7 +14,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -31,21 +22,21 @@
   <collision>
     <origin rpy="0 0 0" xyz="0 0 0"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="yaw_servo1">
+<link name="roll_yaw_servo1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-0.013167494315320315 -4.684638372969008e-05 0.01584835755541894"/>
-    <mass value="0.3184697824599338"/>
-    <inertia ixx="4.87833201308842e-05" ixy="6.7506900070229015e-09" ixz="-1.5463592360685606e-06" iyy="8.92861303184762e-05" iyz="7.671572582268818e-09" izz="7.73210955740196e-05"/>
+    <origin rpy="0 0 0" xyz="-0.013268240030092209 0.016285248127358667 0.016124466822691624"/>
+    <mass value="0.6469480906726006"/>
+    <inertia ixx="0.0002746002016814908" ixy="1.6904286845290833e-06" ixz="-1.6916061051645942e-06" iyy="0.0001706247777873023" iyz="-2.7121799154343137e-06" izz="0.00034182155339970884"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="-0.016 0.095 0.0374"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/yaw_servo1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/roll_yaw_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -53,65 +44,21 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.016 0.095 0.0374"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/yaw_servo1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="roll2yaw_mount1">
-  <inertial>
-    <origin rpy="0 0 0" xyz="0.014120331710048785 0.03382582487425398 -0.01421655548476504"/>
-    <mass value="0.010008525752734407"/>
-    <inertia ixx="7.712629000153825e-06" ixy="1.0608720196179424e-09" ixz="-2.5034853953413523e-07" iyy="3.5359490585722074e-06" iyz="-5.980804851237978e-08" izz="5.539238984853685e-06"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="0.0178 0.11045 0.00555"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/roll2yaw_mount1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="0.0178 0.11045 0.00555"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/roll2yaw_mount1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="roll_servo1">
-  <inertial>
-    <origin rpy="0 0 0" xyz="-0.009967494315320308 -0.014898357555418865 -0.01549684638372982"/>
-    <mass value="0.3184697824599338"/>
-    <inertia ixx="4.878332013088312e-05" ixy="1.5463592360686216e-06" ixz="6.750690007087276e-09" iyy="7.732109557401727e-05" iyz="-7.671572581997767e-09" izz="8.928613031847481e-05"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="-0.0128 0.04755 0.00555"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/roll_servo1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="-0.0128 0.04755 0.00555"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/roll_servo1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/roll_yaw_servo1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="gripper_mount1">
   <inertial>
-    <origin rpy="0 0 0" xyz="-4.055486153327348e-05 0.015016957245028106 0.0033366712510858668"/>
-    <mass value="0.03378268770833562"/>
-    <inertia ixx="8.938016413913612e-06" ixy="1.617386257979765e-08" ixz="5.187745907495305e-09" iyy="2.3134388595606e-05" iyz="-1.3092691775438619e-06" izz="2.4760598522383693e-05"/>
+    <origin rpy="0 0 0" xyz="-4.652947513627062e-05 0.03250495822449525 0.0008818441838164721"/>
+    <mass value="0.6707222526282031"/>
+    <inertia ixx="0.00019860440757462537" ixy="3.339203666162917e-08" ixz="-1.0677422396709792e-08" iyy="0.00028397193654952125" iyz="3.310663035340709e-06" izz="0.0003533390722831966"/>
   </inertial>
   <visual>
     <origin rpy="0 0 0" xyz="-0.016 0.0466 0.021"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -119,51 +66,7 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.016 0.0466 0.021"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="l_servo1">
-  <inertial>
-    <origin rpy="0 0 0" xyz="0.013453153616270093 0.0013325056846796753 -0.015248357555418993"/>
-    <mass value="0.3184697824599338"/>
-    <inertia ixx="8.928613031847579e-05" ixy="6.750690006982509e-09" ixz="-7.6715725822919e-09" iyy="4.878332013088287e-05" iyz="1.5463592360686284e-06" izz="7.732109557401901e-05"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="0.0135 0.0145 0.005"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_servo1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="0.0135 0.0145 0.005"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_servo1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="r_servo1">
-  <inertial>
-    <origin rpy="0 0 0" xyz="-0.013546846383729903 0.0013325056846796805 -0.015248357555418993"/>
-    <mass value="0.3184697824599338"/>
-    <inertia ixx="8.928613031847582e-05" ixy="6.7506900069957965e-09" ixz="-7.671572582295923e-09" iyy="4.878332013088279e-05" iyz="1.5463592360686148e-06" izz="7.732109557401901e-05"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="-0.0455 0.0145 0.005"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/r_servo1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="-0.0455 0.0145 0.005"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/r_servo1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/gripper_mount1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -177,7 +80,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/l_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/l_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -185,80 +88,10 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.0 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/l_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/l_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
-
-<!--
-<link name="l_link31">
-  <inertial>
-    <origin rpy="0 0 0" xyz="-0.0017956453296221562 0.02496942356962671 -0.018242185156636687"/>
-    <mass value="0.027635011745384516"/>
-    <inertia ixx="1.7261546453361967e-05" ixy="-1.913789502182194e-06" ixz="-4.1288871170401643e-07" iyy="3.610758696806827e-06" iyz="-1.2448919056449177e-06" izz="1.5583906769825435e-05"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="-0.0 -0.05 0.003"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_link31.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="-0.0 -0.05 0.003"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_link31.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
--->
-
-<link name="l_link31">
-  <inertial>
-    <origin rpy="0 0 0" xyz="0.021821354670377845 0.043469423569626714 0.0007578148433633122"/>
-    <mass value="0.027635011745384516"/>
-    <inertia ixx="1.7261546453361967e-05" ixy="-1.913789502182194e-06" ixz="-4.1288871170401643e-07" iyy="3.610758696806827e-06" iyz="-1.2448919056449177e-06" izz="1.5583906769825435e-05"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="0.023617 -0.0315 0.022"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_link31.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="0.023617 -0.0315 0.022"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_link31.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<gazebo>
-<link name="l_link21">
-  <inertial>
-    <origin rpy="0 0 0" xyz="-0.005239897396468952 0.024999999999999953 -0.0034999999999999996"/>
-    <mass value="0.0034055466614027626"/>
-    <inertia ixx="8.937503488739492e-07" ixy="2.117582368135751e-22" ixz="4.235164736271502e-22" iyy="6.25227162971244e-08" iyz="2.117582368135751e-22" izz="9.29604599973145e-07"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="0.023617 0.0185 0.015"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_link21.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="0.023617 0.0185 0.015"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/l_link21.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-</gazebo>
 
 <link name="r_link11">
   <inertial>
@@ -269,7 +102,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.032 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/r_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/r_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -277,12 +110,33 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.032 -0.0 0.0044"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/r_link11.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/r_link11.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<!--
+<link name="l_link31">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.0017956453296221562 0.02496942356962671 -0.018242185156636687"/>
+    <mass value="0.027635011745384516"/>
+    <inertia ixx="1.7261546453361967e-05" ixy="-1.913789502182194e-06" ixz="-4.1288871170401643e-07" iyy="3.610758696806827e-06" iyz="-1.2448919056449177e-06" izz="1.5583906769825435e-05"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0 -0.05 0.003"/>
+    <geometry>
+      <mesh filename="meshes/l_link31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+    <material/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0 -0.05 0.003"/>
+    <geometry>
+      <mesh filename="meshes/l_link31.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
 <link name="r_link31">
   <inertial>
     <origin rpy="0 0 0" xyz="0.0017956453296221475 0.024969423569626725 -0.018242185156636687"/>
@@ -292,7 +146,7 @@
   <visual>
     <origin rpy="0 0 0" xyz="-0.032 -0.05 0.003"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/r_link31.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/r_link31.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
     <material/>
@@ -300,259 +154,111 @@
   <collision>
     <origin rpy="0 0 0" xyz="-0.032 -0.05 0.003"/>
     <geometry>
-      <mesh filename="package://gripperv4/assets/r_link31.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
--->
-
-<link name="r_link31">
-  <inertial>
-    <origin rpy="0 0 0" xyz="-0.02182135467037785 0.04346942356962673 0.0007578148433633122"/>
-    <mass value="0.027635011745384488"/>
-    <inertia ixx="1.726154645336045e-05" ixy="1.9137895021821837e-06" ixz="4.128887117040158e-07" iyy="3.6107586968067967e-06" iyz="-1.2448919056448838e-06" izz="1.558390676982397e-05"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="-0.055617 -0.0315 0.022"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/r_link31.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="-0.055617 -0.0315 0.022"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/r_link31.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="meshes/r_link31.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<!--
-<link name="r_link21">
-  <inertial>
-    <origin rpy="0 0 0" xyz="0.005239897396468955 0.024999999999999953 -0.0034999999999999996"/>
-    <mass value="0.0034055466614027626"/>
-    <inertia ixx="8.937503488739492e-07" ixy="2.117582368135751e-22" ixz="0.0" iyy="6.252271629712694e-08" iyz="2.6469779601696886e-22" izz="9.29604599973145e-07"/>
-  </inertial>
-  <visual>
-    <origin rpy="0 0 0" xyz="-0.055617 0.0185 0.015"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/r_link21.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-    <material/>
-  </visual>
-  <collision>
-    <origin rpy="0 0 0" xyz="-0.055617 0.0185 0.015"/>
-    <geometry>
-      <mesh filename="package://gripperv4/assets/r_link21.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
--->
-
-<joint name="Rev88" type="continuous">
+<joint name="Rev_base" type="continuous">
   <origin rpy="0 0 0" xyz="0.016 -0.095 -0.0374"/>
   <parent link="base_link"/>
-  <child link="yaw_servo1"/>
+  <child link="roll_yaw_servo1"/>
   <axis xyz="0.0 0.0 1.0"/>
 </joint>
-<transmission name="Rev88_tran">
+<transmission name="Rev_base_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev88">
+  <joint name="Rev_base">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev88_actr">
+  <actuator name="Rev_base_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<joint name="Rigid89" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.0338 -0.01545 0.03185"/>
-  <parent link="yaw_servo1"/>
-  <child link="roll2yaw_mount1"/>
-</joint>
-
-<joint name="Rigid90" type="fixed">
-  <origin rpy="0 0 0" xyz="0.0306 0.0629 0.0"/>
-  <parent link="roll2yaw_mount1"/>
-  <child link="roll_servo1"/>
-</joint>
-
-<joint name="Rev91" type="continuous">
-  <origin rpy="0 0 0" xyz="0.0032 0.00095 -0.01545"/>
-  <parent link="roll_servo1"/>
+<joint name="Rev_roll" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.0484 0.0164"/>
+  <parent link="roll_yaw_servo1"/>
   <child link="gripper_mount1"/>
-  <axis xyz="-0.0 -1.0 0.0"/>
+  <axis xyz="0.0 1.0 -0.0"/>
 </joint>
-<transmission name="Rev91_tran">
+<transmission name="Rev_roll_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev91">
+  <joint name="Rev_roll">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev91_actr">
+  <actuator name="Rev_roll_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<joint name="Rigid92" type="fixed">
-  <origin rpy="0 0 0" xyz="-0.0295 0.0321 0.016"/>
+<joint name="Rev_left" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.016 0.0466 0.0166"/>
   <parent link="gripper_mount1"/>
-  <child link="l_servo1"/>
-</joint>
-
-<joint name="Rigid93" type="fixed">
-  <origin rpy="0 0 0" xyz="0.0295 0.0321 0.016"/>
-  <parent link="gripper_mount1"/>
-  <child link="r_servo1"/>
-</joint>
-
-<joint name="Rev94" type="continuous">
-  <origin rpy="0 0 0" xyz="0.0135 0.0145 0.0006"/>
-  <parent link="l_servo1"/>
   <child link="l_link11"/>
   <axis xyz="0.0 0.0 1.0"/>
 </joint>
-<transmission name="Rev94_tran">
+<transmission name="Rev_left_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev94">
+  <joint name="Rev_left">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev94_actr">
+  <actuator name="Rev_left_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<joint name="Rev95" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.023617 0.0315 -0.0176"/>
-  <parent link="l_link11"/>
-  <child link="l_link31"/>
-  <axis xyz="0.0 0.0 1.0"/>
-</joint>
-<transmission name="Rev95_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev95">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Rev95_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
-
-<!--
-<joint name="Rev96" type="continuous">
-  <origin rpy="0 0 0" xyz="0.0 0.05 -0.007"/>
-  <parent link="l_link21"/>
-  <child link="l_link31"/>
-  <axis xyz="0.0 0.0 -1.0"/>
-</joint>
-<transmission name="Rev96_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev96">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Rev96_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
--->
-
-<!--
-<joint name="Rev97" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.039617 0.0281 0.006"/>
+<joint name="Rev_right" type="continuous">
+  <origin rpy="0 0 0" xyz="0.016 0.0466 0.0166"/>
   <parent link="gripper_mount1"/>
-  <child link="l_link21"/>
-  <axis xyz="0.0 0.0 -1.0"/>
-</joint>
-<transmission name="Rev97_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev97">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Rev97_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
--->
-
-<joint name="Rev98" type="continuous">
-  <origin rpy="0 0 0" xyz="-0.0135 0.0145 0.0006"/>
-  <parent link="r_servo1"/>
   <child link="r_link11"/>
   <axis xyz="0.0 0.0 1.0"/>
 </joint>
-<transmission name="Rev98_tran">
+<transmission name="Rev_right_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev98">
+  <joint name="Rev_right">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev98_actr">
+  <actuator name="Rev_right_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<!-- JOINT IS OFF -->
-<joint name="Rev99" type="continuous">
-  <origin rpy="0 0 0" xyz="0.023617 0.0315 -0.0176"/>
-  <parent link="r_link11"/>
-  <child link="r_link31"/>
+<joint name="Rev_left_finger" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.05 0.0014"/>
+  <parent link="l_link11"/>
+  <child link="l_link31"/>
   <axis xyz="0.0 0.0 -1.0"/>
 </joint>
-<transmission name="Rev99_tran">
+<transmission name="Rev_left_finger_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev99">
+  <joint name="Rev_left_finger">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev99_actr">
+  <actuator name="Rev_left_finger_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
 
-<!--
-<joint name="Rev100" type="continuous">
-  <origin rpy="0 0 0" xyz="0.0 0.05 -0.007"/>
-  <parent link="r_link21"/>
+<joint name="Rev_right_finger" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.05 0.0014"/>
+  <parent link="r_link11"/>
   <child link="r_link31"/>
   <axis xyz="0.0 0.0 1.0"/>
 </joint>
-<transmission name="Rev100_tran">
+<transmission name="Rev_right_finger_tran">
   <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev100">
+  <joint name="Rev_right_finger">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
   </joint>
-  <actuator name="Rev100_actr">
+  <actuator name="Rev_right_finger_actr">
     <hardwareInterface>PositionJointInterface</hardwareInterface>
     <mechanicalReduction>1</mechanicalReduction>
   </actuator>
 </transmission>
--->
-
-<!--
-<joint name="Rev101" type="continuous">
-  <origin rpy="0 0 0" xyz="0.039617 0.0281 0.006"/>
-  <parent link="gripper_mount1"/>
-  <child link="r_link21"/>
-  <axis xyz="0.0 0.0 1.0"/>
-</joint>
-<transmission name="Rev101_tran">
-  <type>transmission_interface/SimpleTransmission</type>
-  <joint name="Rev101">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-  </joint>
-  <actuator name="Rev101_actr">
-    <hardwareInterface>PositionJointInterface</hardwareInterface>
-    <mechanicalReduction>1</mechanicalReduction>
-  </actuator>
-</transmission>
--->
 
 </robot>
