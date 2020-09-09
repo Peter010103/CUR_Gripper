@@ -17,4 +17,13 @@ Follows a common 4-bar linkage (parallelogram) mechanism for gripping action. Th
 </p>
 
 # URDF Layout
-<img src="assets/urdf.png" width="400">
+<p align="center">
+  <img src="assets/urdf.png" width="400">
+</p>
+
+To conform with the URDF format, some components were removed to make the tree 'open-loop' in RViz.
+
+# RViz Simulation
+<p align="center">
+  <img src="assets/RViz.png" width="600">
+</p>
