@@ -1,0 +1,26 @@
+digraph G {
+node [shape=box];
+"base_link" [label="base_link"];
+"roll_yaw_servo1" [label="roll_yaw_servo1"];
+"gripper_mount1" [label="gripper_mount1"];
+"l_link11" [label="l_link11"];
+"l_link31" [label="l_link31"];
+"r_link11" [label="r_link11"];
+"r_link31" [label="r_link31"];
+"base_link_actual" [label="base_link_actual"];
+node [shape=ellipse, color=blue, fontcolor=blue];
+"base_link" -> "Rev_base" [label="xyz: 0.016 -0.095 -0.0374 \nrpy: 0 -0 0"]
+"Rev_base" -> "roll_yaw_servo1"
+"roll_yaw_servo1" -> "Rev_roll" [label="xyz: 0 0.0484 0.0164 \nrpy: 0 -0 0"]
+"Rev_roll" -> "gripper_mount1"
+"gripper_mount1" -> "Rev_left" [label="xyz: -0.016 0.0466 0.0166 \nrpy: 0 -0 0"]
+"Rev_left" -> "l_link11"
+"l_link11" -> "Rev_left_finger" [label="xyz: 0 0.05 0.0014 \nrpy: 0 -0 0"]
+"Rev_left_finger" -> "l_link31"
+"gripper_mount1" -> "Rev_right" [label="xyz: 0.016 0.0466 0.0166 \nrpy: 0 -0 0"]
+"Rev_right" -> "r_link11"
+"r_link11" -> "Rev_right_finger" [label="xyz: 0 0.05 0.0014 \nrpy: 0 -0 0"]
+"Rev_right_finger" -> "r_link31"
+"base_link" -> "dummy_link" [label="xyz: 0 0 0 \nrpy: 0 -0 0"]
+"dummy_link" -> "base_link_actual"
+}
