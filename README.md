@@ -21,7 +21,7 @@ Follows a common 4-bar linkage (parallelogram) mechanism for gripping action. Th
   <img src="assets/urdf.png" width="400">
 </p>
 
-To conform with the URDF format, some components were removed to make the tree 'open-loop' in RViz. Dependent joints between the servo arm (link1) and the finger (link3) were added [dependent_joints.yaml](catkin_ws/src/gripperv4/dependent_joints.yaml) instead to mimic the motion of the parallelogram mechanism.
+To conform with the URDF format, some components were removed to make the tree 'open-loop' in RViz. Dependent joints between the servo arm (link1) and the finger (link3) were added [dependent_joints.yaml](catkin_ws/src/gripperv4/config/dependent_joints.yaml) instead to mimic the motion of the parallelogram mechanism.
 
 # RViz Simulation
 <p align="center">
