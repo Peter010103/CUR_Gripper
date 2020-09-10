@@ -8,7 +8,7 @@ The Fusion scripts from the above links are in the scripts folder for convenienc
 
 # Hardware Overview
 - 6 x ROBOTIS AX-12A actuators used for Gripper, Roll & Yaw Axis & Pitch Axis(?)
-- 3D printed in PETG (STL files in assets)
+- 3D printed in PETG (STL files in [assets](catkin_ws/src/gripperv4/assets))
 
 Follows a common 4-bar linkage (parallelogram) mechanism for gripping action. The wrist axes are designed to be able to rotate a full 360 degrees (must ensure long enough wires are used !)
 
@@ -21,7 +21,7 @@ Follows a common 4-bar linkage (parallelogram) mechanism for gripping action. Th
   <img src="assets/urdf.png" width="400">
 </p>
 
-To conform with the URDF format, some components were removed to make the tree 'open-loop' in RViz.
+To conform with the URDF format, some components were removed to make the tree 'open-loop' in RViz. Dependent joints between the servo arm (link1) and the finger (link3) were added [dependent_joints.yaml](catkin_ws/src/gripperv4/dependent_joints.yaml) instead to mimic the motion of the parallelogram mechanism.
 
 # RViz Simulation
 <p align="center">
