@@ -72,6 +72,11 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        pitch_mount1:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         roll_yaw_servo1:
           Alpha: 1
           Show Axes: false
@@ -87,7 +92,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        l_link31:
+        l_link21:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        l_finger1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -97,7 +107,12 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        r_link31:
+        r_link21:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_finger1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -117,17 +132,23 @@ Visualization Manager:
           Value: true
         base_link_actual:
           Value: true
+        pitch_mount1:
+          Value: true
         roll_yaw_servo1:
           Value: true
         gripper_mount1:
           Value: true
         l_link11:
           Value: true
-        l_link31:
+        l_link21:
+          Value: true
+        l_finger1:
           Value: true
         r_link11:
           Value: true
-        r_link31:
+        r_link21:
+          Value: true
+        r_finger1:
           Value: true
       Marker Scale: 0.10000000149011612
       Name: TF
@@ -138,13 +159,18 @@ Visualization Manager:
         base_link:
           base_link_actual:
             {}
-          roll_yaw_servo1:
-            gripper_mount1:
-              l_link11:
-                l_link31:
+          pitch_mount1:
+            roll_yaw_servo1:
+              gripper_mount1:
+                l_link11:
+                  l_finger1:
+                    {}
+                l_link21:
                   {}
-              r_link11:
-                r_link31:
+                r_link11:
+                  r_finger1:
+                    {}
+                r_link21:
                   {}
       Value: true
   Enabled: true

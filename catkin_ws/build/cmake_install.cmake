@@ -136,7 +136,13 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/peterwoo/catkin_ws/build/gtest/cmake_install.cmake")
+  include("/home/peterwoo/catkin_ws/build/dynamixel-workbench/dynamixel_workbench/cmake_install.cmake")
   include("/home/peterwoo/catkin_ws/build/gripperv4/cmake_install.cmake")
+  include("/home/peterwoo/catkin_ws/build/dynamixel-workbench-msgs/dynamixel_workbench_msgs/cmake_install.cmake")
+  include("/home/peterwoo/catkin_ws/build/DynamixelSDK/ros/cmake_install.cmake")
+  include("/home/peterwoo/catkin_ws/build/dynamixel-workbench/dynamixel_workbench_toolbox/cmake_install.cmake")
+  include("/home/peterwoo/catkin_ws/build/dynamixel-workbench/dynamixel_workbench_controllers/cmake_install.cmake")
+  include("/home/peterwoo/catkin_ws/build/dynamixel-workbench/dynamixel_workbench_operators/cmake_install.cmake")
 
 endif()
 

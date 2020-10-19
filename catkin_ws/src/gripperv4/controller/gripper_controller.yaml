@@ -1,0 +1,54 @@
+pitch_controller:
+  controller:
+  joint_name: Rev_pitch
+  joint_speed:
+  motor:
+      id: 12
+      init: 512
+      min: 202
+      max: 822
+
+yaw_controller:
+  controller:
+  joint_name: Rev_yaw
+  motor:
+      id: 17
+      init: 512
+      min: 305
+      max: 719
+
+roll_controller:
+  controller: 15
+      package: dynamixel_controllers
+      module: joint_position_controller
+      type: JointPositionController
+  joint_name: Rev_roll
+  motor:
+      id: 15
+      init: 512
+      min: 202
+      max: 822
+
+r_finger_controller:
+  controller:
+      package: dynamixel_controllers
+      module: joint_position_controller
+      type: JointPositionController
+  joint_name: Rev_right
+  motor_master: 
+      id: 18
+      init: 512
+      min: 202
+      max: 577
+
+l_finger_controller:
+  controller: 
+      package: dynamixel_controllers
+      module: joint_position_controller
+      type: JointPositionController
+  joint_name: Rev_right
+  motor_master:
+      id: 16
+      init: 512
+      min: 447
+      max: 822

@@ -1,4 +1,6 @@
 dependent_joints:
     Rev_left: {parent: Rev_right, factor: -1 }
-    Rev_left_finger: {parent: Rev_left, factor: 1 }
+    Rev_left_finger: {parent: Rev_right_finger, factor: 1 }
     Rev_right_finger: {parent: Rev_right, factor: -1 }
+    Rev_left_support: {parent: Rev_right, factor: 1}
+    Rev_right_support: {parent: Rev_right, factor: 1}

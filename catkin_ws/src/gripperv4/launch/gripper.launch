@@ -1,4 +1,8 @@
 <launch>
+    <arg name="usb_port"        default="/dev/ttyUSB0"/>
+    <arg name="baud_rate"       default="1000000"/>
+    <arg name="scan_range"      default="25"/>
+
     <param
         name="robot_description"
         textfile="$(find gripperv4)/urdf/gripperv4.urdf"
@@ -8,7 +12,12 @@
         file="$(find gripperv4)/config/dependent_joints.yaml"
         command="load"
     />
-    
+
+    <param 
+        name="dynamixel_info"
+        value="$(find gripperv4)/config/Rescue_gripper.yaml"    />
+    />
+
     <param name="use_gui" value="true" />
 
     <node
@@ -16,12 +25,25 @@
         pkg="joint_state_publisher_gui"
         type="joint_state_publisher_gui"
     />
+
     <node
         name="robot_state_publisher"
         pkg="robot_state_publisher"
         type="robot_state_publisher"
     />
 
+    <node 
+        name="gripper_control" 
+        pkg="dynamixel_workbench_controllers" 
+        type="dynamixel_workbench_controllers" 
+        required="true" 
+        output="screen"
+        args="$(arg usb_port) $(arg baud_rate)"/>
+        <rosparam>
+            publish_period: 0.010
+            dxl_read_period: 0.010
+            dxl_write_period: 0.010
+        </rosparam>
     <node
         name="rviz"
         pkg="rviz"
